@@ -1,0 +1,17 @@
+# vim: ft=yaml
+
+# Set the salt process environment variables
+setenv:
+  # Each key/value pair represents an environment variable to set
+  variables:
+    http_proxy: http://proxy.example.org:3128
+    https_proxy: http://proxy.example.org:3128
+
+  # If True, apply these environ changes to the main salt-minion process
+  # Default: yes
+  update_minion: yes
+
+  # If a key's value is False and false_unsets is True, then the key
+  # will be removed from the salt processes environment dict entirely
+  # Default: yes
+  false_unsets: yes
